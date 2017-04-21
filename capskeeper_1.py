@@ -19,13 +19,13 @@ capsstatus = commands.getoutput('xset q | grep LED')[65]    #THIS IS WHERE WE GE
 def kbeventdown( event ):
     global capsstatus
    #WHEN LEFT ALT IS PRESSED, WE CHECK THE CAPS LOCK STATUS
-    if event.Key == "Alt_L":
-        print "ALT TIS EI!"
+    if event.Key == "Shift_L":
+        print "Shift Key Pressed!"
         capsstatus = commands.getoutput('xset q | grep LED')[65]    #THIS IS WHERE WE GET THE CAPS LOCK STATUS    
         if capsstatus == "2":
-         print "CAPS LOCK OFF"
+         print "CAPS LOCK STATUS: OFF"
         if capsstatus == "3":
-         print "CAPS LOCK ON"
+         print "CAPS LOCK STATUS: ON"
 
 #This function is called every time a key is released        
 def kbeventup( event ):
@@ -33,14 +33,14 @@ def kbeventup( event ):
     #print key info
     #WHEN SHIFT LEFT IS RELEASED, WE CHECKED IF THE CAPS LOCK STATUS HAS CHANGED, TO TAKE THE APPROPRIATE ACTION
     if event.Key == "Shift_L":
-        print "ΤΟ SHIFT ΑΦΕΘΗΚΕ!"
+        print "Shift Key Released!"
         capsstatusnew = commands.getoutput('xset q | grep LED')[65]     #HERE IS WHERE WE GET THE NEW STATUS   
         if capsstatusnew == capsstatus:  #HERE IS WHERE WE COMPARE THE STATUS BEFORE AND AFTER THE LANGUAGE CHANGE
-         print "ΔΕΝ ΚΑΝΩ ΤΙΠΟΤΑ"
+         print "CAPS LOCK STATUS DIDN'T CHANGE, I WONT DO ANYTHING!"
          
          
         else:
-         print "CAPSLOCK CHANGED"    
+         print "CAPS LOCK STATUS HAS CHANGED, SENDING CAPSLOCK KEY PRESS..."    
          pyautogui.press('capslock')
 
 
