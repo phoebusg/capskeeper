@@ -34,6 +34,7 @@ def kbeventup( event ):
     #WHEN SHIFT LEFT IS RELEASED, WE CHECKED IF THE CAPS LOCK STATUS HAS CHANGED, TO TAKE THE APPROPRIATE ACTION
     if event.Key == "Shift_L":
         print "Shift Key Released!"
+        time.sleep(0.1) # I PUT A SLIGHT DELAY BECAUSE MANY TIMES IT COULDNT CATCH THE CHANGE OF THE STATUS
         capsstatusnew = commands.getoutput('xset q | grep LED')[65]     #HERE IS WHERE WE GET THE NEW STATUS   
         if capsstatusnew == capsstatus:  #HERE IS WHERE WE COMPARE THE STATUS BEFORE AND AFTER THE LANGUAGE CHANGE
          print "CAPS LOCK STATUS DIDN'T CHANGE, I WONT DO ANYTHING!"
