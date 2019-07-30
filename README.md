@@ -1,4 +1,5 @@
 # capskeeper
+# Since Ubuntu switched to Gnome Desktop, Capskeeper script is no longer needed. So, since I switched to Ubuntu 18.04 more than a year ago, I have stopped dealing with this bug, and I no longer develop nor support Capskeeper script. Thank you for your interest!
 This is a simple script, so that we can keep the CAPS LOCK status while switching languages with the Alt+Shift L keys, in Ubuntu Unity. (as many people ask, "Caps Lock is turned off when i change the language, what can I do"
 It uses the pyxhook module to listen to the key presses even in the background (included), and it also takes advantage of the pyautogui library to automatically press CAPS LOCK button, if needed (needs to be installed separatelly, with the command pip install -U pyautogui).
 
