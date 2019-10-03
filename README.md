@@ -1,7 +1,7 @@
 # capskeeper
 # Since Apple changed how caps lock behavior works while switching languages, Capskeeper script is again needed.
 
-This is a simple script, so that we can keep the CAPS LOCK status while switching languages with the Alt+Shift L keys, in Ubuntu Unity. (as many people ask, "Caps Lock is turned off when i change the language, what can I do"
+This is a simple script, so that we can keep the CAPS LOCK status while switching languages with the CMD+Space keys, in OS X. (as many people ask, "Caps Lock is turned off when I change the language, what can I do"
 It uses the pyxhook module to listen to the key presses even in the background (included), and it also takes advantage of the pyautogui library to automatically press CAPS LOCK button, if needed (needs to be installed separatelly, with the command pip install -U pyautogui).
 
 INSTALLATION INSTRUCTIONS - USAGE:
@@ -12,7 +12,7 @@ In terminal, type pip install -U pyautogui .
 
 3. Download the script in your home folder:
 cd ~
-git clone git://github.com/mechpanos/capskeeper
+git clone git://github.com/phoebusg/capskeeper
 This will create a folder named /capskeeper in your home folder, containing the script.
 
 4. Run it!
@@ -56,7 +56,7 @@ OΔΗΓΙΕΣ ΕΓΚΑΤΑΣΤΑΣΗΣ& ΧΡΗΣΗΣ:
 	pip install -U pyautogui.
 3.	Κατεβάζουμε το σκριπτ στον τοπικό μας φάκελο:
 	cd ~
-	git clone git://github.com/mechpanos/capskeeper
+	git clone git://github.com/phoebusg/capskeeper
 	Θα δημιουργηθεί ένας φάκελος, ο οποίος θα περιέχει το script.
 4.	Το τρέχουμε!
 	cd capskeeper
